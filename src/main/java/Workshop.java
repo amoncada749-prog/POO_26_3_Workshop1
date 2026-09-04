@@ -1,11 +1,14 @@
 import java.util.List;
 
 public class Workshop {
-    public static void main(String[] args) {
+   public static void main(String[] args) {
     Workshop workshop = new Workshop();
 
-    System.out.println(workshop.esPrimo(7));
-    System.out.println(workshop.esPrimo(8));
+    int[] resultado = workshop.serieFibonacci(5);
+
+    for (int numero : resultado) {
+        System.out.print(numero + " ");
+    }
 }
 
     // Método que suma dos números enteros
@@ -69,11 +72,31 @@ if (n < 0) {
 
     // Método que genera una serie de Fibonacci
     public int[] serieFibonacci(int n) {
+if (n < 0) {
+        throw new IllegalArgumentException("El numero no puede ser negativo");
+    }
+
+    int[] resultado = new int[n];
+
+    if (n > 0) {
+        resultado[0] = 0;
+    }
+
+    if (n > 1) {
+        resultado[1] = 1;
+    }
+
+    for (int i = 2; i < n; i++) {
+        resultado[i] = resultado[i - 1] + resultado[i - 2];
+    }
+
+    return resultado;
+}
         // TODO: Implementar el método para generar la serie de Fibonacci hasta el número n.
         // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
         // Lanzar IllegalArgumentException si n es negativo.
-        return new int[0];
-    }
+        
+    
 
     // Método que suma todos los elementos de un arreglo
     public int sumaElementos(int[] arreglo) {
