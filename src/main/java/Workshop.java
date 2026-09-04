@@ -2,8 +2,11 @@ import java.util.List;
 
 public class Workshop {
     public static void main(String[] args) {
+    Workshop workshop = new Workshop();
 
-    }
+    System.out.println(workshop.esPrimo(7));
+    System.out.println(workshop.esPrimo(8));
+}
 
     // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
@@ -15,34 +18,54 @@ public class Workshop {
 
     // Método que encuentra el mayor de tres números enteros
     public int mayorDeTresNumeros(int a, int b, int c) {
-        // TODO: Implementar el método para retornar el mayor de los tres números enteros.
-        // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
-      if (a>= b && a >=c) return a;
-    if (b>=c) return b;  
+ if (a >= b && a >=c) return a;
+    if (b >= c) return b;  
       return c;
     }
 
+        // TODO: Implementar el método para retornar el mayor de los tres números enteros.
+        // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
+     
     // Método que retorna la tabla de multiplicar de un número
     public int[] tablaMultiplicar(int numero, int limite) {
-        // TODO: Implementar el método para retornar la tabla de multiplicar del número dado.
-        // Ejemplo: Si numero = 2 y limite = 5, el resultado debería ser [2, 4, 6, 8, 10].
-        return new int[0];
+int[] resultado = new int[limite];
+
+    for (int i = 0; i < limite; i++) {
+        resultado[i] = numero * (i + 1);
     }
 
+    return resultado;
+}
+        
     // Método que calcula el factorial de un número entero
     public int factorial(int n) {
-        // TODO: Implementar el método para calcular el factorial de un número entero.
-        // Ejemplo: Si n = 5, el resultado debería ser 120.
-        // Lanzar IllegalArgumentException si n es negativo.
-        return 0;
+if (n < 0) {
+        throw new IllegalArgumentException("El numero no puede ser negativo");
     }
+
+    int resultado = 1;
+
+    for (int i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+
+    return resultado;
+}        
 
     // Método que verifica si un número es primo
     public boolean esPrimo(int numero) {
-        // TODO: Implementar el método para verificar si un número es primo.
-        // Ejemplo: Si numero = 7, el resultado debería ser true.
+ if (numero < 2) {
         return false;
     }
+
+    for (int i = 2; i < numero; i++) {
+        if (numero % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
 
     // Método que genera una serie de Fibonacci
     public int[] serieFibonacci(int n) {
