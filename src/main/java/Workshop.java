@@ -1,15 +1,14 @@
 import java.util.List;
 
 public class Workshop {
- public static void main(String[] args) {
+public static void main(String[] args) {
     Workshop workshop = new Workshop();
-
-    int[] numeros = {4, 8, 2, 10, 5};
-
-    System.out.println(workshop.buscarElemento(numeros, 10));
-    System.out.println(workshop.buscarElemento(numeros, 7));
+    int[] numeros = {1, 2, 3, 4, 5};
+    int[] resultado = workshop.invertirArreglo(numeros);
+    for (int numero : resultado) {
+        System.out.print(numero + " ");
+    }
 }
-
 
     // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
@@ -169,6 +168,11 @@ return true;
 
     // Método que invierte un arreglo
     public int[] invertirArreglo(int[] arreglo) {
+int [] resultado = new int[arreglo.length];
+for (int i = 0; i < arreglo.length; i++) {
+resultado [i] = arreglo[arreglo.length - 1 - i];
+}
+
         // TODO: Implementar el método para invertir un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser [5, 4, 3, 2, 1].
         return new int[0];
