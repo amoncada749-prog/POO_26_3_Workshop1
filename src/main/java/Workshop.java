@@ -3,14 +3,12 @@ import java.util.List;
 public class Workshop {
 public static void main(String[] args) {
     Workshop workshop = new Workshop();
-    int[] arreglo1 = {1, 2, 3};
-    int[] arreglo2 = {4, 5, 6};
-    int[] resultado = workshop.combinarArreglos(arreglo1, arreglo2);
-    for (int numero : resultado) {
-        System.out.print(numero + " ");
- }
-}
-    // Método que suma dos números enteros
+int[] numeros = {1, 2, 3, 4, 5};
+int[] resultado = workshop.rotarArreglo(numeros, 2);
+for (int numero : resultado) {
+System.out.print(numero + " ");
+    }
+}    // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
         // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
@@ -236,11 +234,17 @@ return resultado;
        
     // Método que rota un arreglo n posiciones
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
-        // TODO: Implementar el método para rotar un arreglo n posiciones.
+int[] resultado = new int[arreglo.length];
+for (int i = 0; i < arreglo.length; i++) {
+int nuevaPosicion = (i + posiciones) % arreglo.length;
+resultado[nuevaPosicion] = arreglo[i];
+}
+return resultado;
+}
+ 
+    // TODO: Implementar el método para rotar un arreglo n posiciones.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y posiciones = 2, el resultado debería ser [3, 4, 5, 1, 2].
-        return new int[0];
-    }
-
+        
     // Método que cuenta los caracteres en una cadena
     public int contarCaracteres(String cadena) {
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
