@@ -6,7 +6,7 @@ public class Workshop {
 
     int[] numeros = {1, 2, 3, 4, 5};
 
-    System.out.println(workshop.sumaElementos(numeros));
+    System.out.println(workshop.promedioElementos(numeros));
 }
 
 
@@ -114,10 +114,17 @@ int suma = 0;
 
     // Método que calcula el promedio de los elementos de un arreglo
     public double promedioElementos(int[] arreglo) {
+int suma = 0;
+for (int numero : arreglo) {
+suma += numero;
+}
+return (double) suma / arreglo.length;
+}
+
         // TODO: Implementar el método para calcular el promedio de los elementos de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
-        return 0.0;
-    }
+        
+    
 
     // Método que encuentra el elemento mayor en un arreglo
     public int encontrarElementoMayor(int[] arreglo) {
