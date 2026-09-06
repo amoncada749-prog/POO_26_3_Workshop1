@@ -1,12 +1,12 @@
 import java.util.List;
 
 public class Workshop {
-   public static void main(String[] args) {
+  public static void main(String[] args) {
     Workshop workshop = new Workshop();
 
-    int[] numeros = {1, 2, 3, 4, 5};
+    int[] numeros = {4, 8, 2, 10, 5};
 
-    System.out.println(workshop.promedioElementos(numeros));
+    System.out.println(workshop.encontrarElementoMenor(numeros));
 }
 
 
@@ -143,6 +143,12 @@ return mayor;
 
     // Método que encuentra el elemento menor en un arreglo
     public int encontrarElementoMenor(int[] arreglo) {
+int menor = arreglo [0]
+for (int numero : arreglo) {
+if (numero < menor) {
+menor = numero;
+}
+}
         // TODO: Implementar el método para encontrar el elemento menor en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 1.
         return 0;
