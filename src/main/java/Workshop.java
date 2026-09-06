@@ -3,8 +3,8 @@ import java.util.List;
 public class Workshop {
 public static void main(String[] args) {
     Workshop workshop = new Workshop();
-    int[] numeros = {1, 2, 3, 4, 5};
-    int[] resultado = workshop.invertirArreglo(numeros);
+    int[] numeros = {5, 2, 8, 1, 4};
+    int[] resultado = workshop.ordenarArreglo(numeros);
     for (int numero : resultado) {
         System.out.print(numero + " ");
     }
@@ -181,6 +181,17 @@ return resultado;
 
     // Método que ordena un arreglo en orden ascendente
     public int[] ordenarArreglo(int[] arreglo) {
+int [] resultado = arreglo.clone();
+for (int i = 0; i < resultado.length -1; i++) {
+for (int j = i + 1; j < resultado.length; j++) {
+if (resultado [i] > resultado[j] {
+int temporal = resultado [i];
+resultado[i] = resultado[j];
+resultado[j] = temporal;
+}
+}
+}
+
         // TODO: Implementar el método para ordenar un arreglo en orden ascendente.
         // Ejemplo: Si arreglo = [5, 4, 3, 2, 1], el resultado debería ser [1, 2, 3, 4, 5].
         return new int[0];
