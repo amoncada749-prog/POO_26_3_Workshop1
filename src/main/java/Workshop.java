@@ -1,12 +1,13 @@
 import java.util.List;
 
 public class Workshop {
-  public static void main(String[] args) {
+ public static void main(String[] args) {
     Workshop workshop = new Workshop();
 
     int[] numeros = {4, 8, 2, 10, 5};
 
-    System.out.println(workshop.encontrarElementoMenor(numeros));
+    System.out.println(workshop.buscarElemento(numeros, 10));
+    System.out.println(workshop.buscarElemento(numeros, 7));
 }
 
 
@@ -156,6 +157,11 @@ menor = numero;
 
     // Método que busca un elemento en un arreglo
     public boolean buscarElemento(int[] arreglo, int elemento) {
+for (int numero : arreglo) {
+if (numero == elemento) {
+return true;
+}
+}
         // TODO: Implementar el método para buscar un elemento en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y elemento = 3, el resultado debería ser true.
         return false;
