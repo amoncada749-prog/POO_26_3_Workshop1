@@ -143,7 +143,7 @@ return mayor;
 
     // Método que encuentra el elemento menor en un arreglo
     public int encontrarElementoMenor(int[] arreglo) {
-int menor = arreglo [0]
+int menor = arreglo [0];
 for (int numero : arreglo) {
 if (numero < menor) {
 menor = numero;
