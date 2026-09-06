@@ -198,7 +198,6 @@ return resultado;
         
     // Método que elimina los duplicados de un arreglo
     public int[] eliminarDuplicados(int[] arreglo) {
-public int[] eliminarDuplicados(int[] arreglo) {
 int[] resultado = new int[arreglo.length];
 int cantidad = 0;
 for (int numero : arreglo) {
