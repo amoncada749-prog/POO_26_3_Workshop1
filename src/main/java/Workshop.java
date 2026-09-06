@@ -3,13 +3,12 @@ import java.util.List;
 public class Workshop {
 public static void main(String[] args) {
     Workshop workshop = new Workshop();
-    int[] numeros = {5, 2, 8, 1, 4};
-    int[] resultado = workshop.ordenarArreglo(numeros);
+    int[] numeros = {1, 2, 2, 3, 1, 4};
+    int[] resultado = workshop.eliminarDuplicados(numeros);
     for (int numero : resultado) {
         System.out.print(numero + " ");
     }
 }
-
     // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
@@ -184,26 +183,42 @@ return resultado;
 int [] resultado = arreglo.clone();
 for (int i = 0; i < resultado.length -1; i++) {
 for (int j = i + 1; j < resultado.length; j++) {
-if (resultado [i] > resultado[j] {
+if (resultado [i] > resultado[j]) {
 int temporal = resultado [i];
 resultado[i] = resultado[j];
 resultado[j] = temporal;
 }
 }
 }
+return resultado;
+}
 
         // TODO: Implementar el método para ordenar un arreglo en orden ascendente.
         // Ejemplo: Si arreglo = [5, 4, 3, 2, 1], el resultado debería ser [1, 2, 3, 4, 5].
-        return new int[0];
-    }
-
+        
     // Método que elimina los duplicados de un arreglo
     public int[] eliminarDuplicados(int[] arreglo) {
+public int[] eliminarDuplicados(int[] arreglo) {
+int[] resultado = new int[arreglo.length];
+int cantidad = 0;
+for (int numero : arreglo) {
+boolean repetido = false;
+for (int i = 0; i < cantidad; i++) {
+if (resultado[i] == numero) {
+repetido = true;
+break;
+}
+}
+if (!repetido) {
+resultado[cantidad] = numero;
+cantidad++;
+}
+}
+return java.util.Arrays.copyOf(resultado, cantidad);
+}
         // TODO: Implementar el método para eliminar los duplicados de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 2, 3, 4, 4, 5], el resultado debería ser [1, 2, 3, 4, 5].
-        return new int[0];
-    }
-
+        
     // Método que combina dos arreglos en uno solo
     public int[] combinarArreglos(int[] arreglo1, int[] arreglo2) {
         // TODO: Implementar el método para combinar dos arreglos en uno solo.
