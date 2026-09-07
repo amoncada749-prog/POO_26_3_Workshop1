@@ -3,9 +3,9 @@ import java.util.List;
 public class Workshop {
 public static void main(String[] args) {
 Workshop workshop = new Workshop();
-System.out.println(
-workshop.reemplazarSubcadena("Hunter x Hunter", "Hunter", "Greninja")
-);
+System.out.println(workshop.buscarSubcadena("Hunter x Hunter", "Hunter"));
+System.out.println(workshop.buscarSubcadena("Hunter x Hunter", "x"));
+System.out.println(workshop.buscarSubcadena("Hunter x Hunter", "pikachu"));
 }
 // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
@@ -324,9 +324,10 @@ return cadena.replace(antiguaSubcadena, nuevaSubcadena);
 
     // Método que busca una subcadena en una cadena y retorna su índice
     public int buscarSubcadena(String cadena, String subcadena) {
+
         // TODO: Implementar el método para buscar una subcadena en una cadena y retornar su índice.
         // Ejemplo: Si cadena = "Hello world" y subcadena = "world", el resultado debería ser 6.
-        return -1;
+        return cadena.indexOf(subcadena);
     }
 
     // Método que valida un correo electrónico
