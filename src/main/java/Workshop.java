@@ -3,8 +3,8 @@ import java.util.List;
 public class Workshop {
 public static void main(String[] args) {
 Workshop workshop = new Workshop();
-System.out.println(workshop.convertirAMayusculas("Hola mundo Java"));
-} 
+System.out.println(workshop.convertirAMinusculas("Hunter x Hunter"));
+}
 // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
@@ -306,10 +306,10 @@ resultado += caracter;
 
     // Método que convierte una cadena a minúsculas
     public String convertirAMinusculas(String cadena) {
+return cadena.toLowerCase();
+}
         // TODO: Implementar el método para convertir una cadena a minúsculas.
         // Ejemplo: Si cadena = "HELLO", el resultado debería ser "hello".
-        return "";
-    }
 
     // Método que reemplaza una subcadena en una cadena por otra subcadena
     public String reemplazarSubcadena(String cadena, String antiguaSubcadena, String nuevaSubcadena) {
