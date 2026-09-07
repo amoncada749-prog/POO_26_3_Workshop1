@@ -335,7 +335,7 @@ int posicionPunto = correo.indexOf(".");
 
         // TODO: Implementar el método para validar un correo electrónico.
         // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
-        return posicionArroba > 0 && posicionPunto > posicionArroba; ;
+        return posicionArroba > 0 && posicionPunto > posicionArroba; 
     }
 
     // Método que calcula el promedio de una lista de números
