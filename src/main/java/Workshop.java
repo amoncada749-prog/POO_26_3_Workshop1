@@ -3,8 +3,7 @@ import java.util.List;
 public class Workshop {
 public static void main(String[] args) {
 Workshop workshop = new Workshop();
-System.out.println(workshop.esPalindromo("radar"));
-System.out.println(workshop.esPalindromo("casa"));
+System.out.println(workshop.contarPalabras("Hola mundo Java"));
 }
  // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
@@ -278,9 +277,15 @@ String invertida = invertirCadena(cadena);
 
     // Método que cuenta el número de palabras en una cadena
     public int contarPalabras(String cadena) {
+int palabras = 1;
+for (int i = 0; i < cadena.length(); i++) {
+if (cadena.charAt(i) == ' ') {
+palabras++;
+}
+}
         // TODO: Implementar el método para contar el número de palabras en una cadena.
         // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
-        return 0;
+        return palabras;
     }
 
     // Método que convierte una cadena a mayúsculas
