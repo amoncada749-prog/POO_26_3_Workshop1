@@ -2,13 +2,10 @@ import java.util.List;
 
 public class Workshop {
 public static void main(String[] args) {
-    Workshop workshop = new Workshop();
-int[] numeros = {1, 2, 3, 4, 5};
-int[] resultado = workshop.rotarArreglo(numeros, 2);
-for (int numero : resultado) {
-System.out.print(numero + " ");
-    }
-}    // Método que suma dos números enteros
+Workshop workshop = new Workshop();
+System.out.println(workshop.contarCaracteres("Hola"));
+}
+ // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
         // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
@@ -247,6 +244,10 @@ return resultado;
         
     // Método que cuenta los caracteres en una cadena
     public int contarCaracteres(String cadena) {
+int contador = 0;
+for (char caracter : cadena.toCharArray()) {
+contador;
+}
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
         return 0;
