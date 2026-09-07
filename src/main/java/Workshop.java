@@ -3,7 +3,9 @@ import java.util.List;
 public class Workshop {
 public static void main(String[] args) {
 Workshop workshop = new Workshop();
-System.out.println(workshop.convertirAMinusculas("Hunter x Hunter"));
+System.out.println(
+workshop.reemplazarSubcadena("Hunter x Hunter", "Hunter", "Greninja")
+);
 }
 // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
@@ -313,9 +315,11 @@ return cadena.toLowerCase();
 
     // Método que reemplaza una subcadena en una cadena por otra subcadena
     public String reemplazarSubcadena(String cadena, String antiguaSubcadena, String nuevaSubcadena) {
+return cadena.replace(antiguaSubcadena, nuevaSubcadena);
+
         // TODO: Implementar el método para reemplazar una subcadena en una cadena por otra subcadena.
         // Ejemplo: Si cadena = "Hello Java", antiguaSubcadena = "Java", y nuevaSubcadena = "world", el resultado debería ser "Hello world".
-        return "";
+        
     }
 
     // Método que busca una subcadena en una cadena y retorna su índice
