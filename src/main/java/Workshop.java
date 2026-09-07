@@ -2,10 +2,8 @@ import java.util.List;
 
 public class Workshop {
 public static void main(String[] args) {
-Workshop workshop = new Workshop();
-System.out.println(workshop.buscarSubcadena("Hunter x Hunter", "Hunter"));
-System.out.println(workshop.buscarSubcadena("Hunter x Hunter", "x"));
-System.out.println(workshop.buscarSubcadena("Hunter x Hunter", "pikachu"));
+    Workshop workshop = new Workshop();    System.out.println(workshop.validarCorreoElectronico("usuario@gmail.com"));
+System.out.println(workshop.validarCorreoElectronico("usuario@gmail"));
 }
 // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
@@ -332,9 +330,12 @@ return cadena.replace(antiguaSubcadena, nuevaSubcadena);
 
     // Método que valida un correo electrónico
     public boolean validarCorreoElectronico(String correo) {
+int posicionArroba = correo.indexOf("@");
+int posicionPunto = correo.indexOf(".");
+
         // TODO: Implementar el método para validar un correo electrónico.
         // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
-        return false;
+        return posicionArroba > 0 && posicionPunto > posicionArroba; ;
     }
 
     // Método que calcula el promedio de una lista de números
