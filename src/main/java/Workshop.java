@@ -3,9 +3,9 @@ import java.util.List;
 public class Workshop {
 public static void main(String[] args) {
 Workshop workshop = new Workshop();
-System.out.println(workshop.contarPalabras("Hola mundo Java"));
-}
- // Método que suma dos números enteros
+System.out.println(workshop.convertirAMayusculas("Hola mundo Java"));
+} 
+// Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
         // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
@@ -290,9 +290,18 @@ palabras++;
 
     // Método que convierte una cadena a mayúsculas
     public String convertirAMayusculas(String cadena) {
-        // TODO: Implementar el método para convertir una cadena a mayúsculas.
+String resultado = "";
+for (int i = 0; i < cadena.length(); i++) {
+char caracter = cadena.charAt(i);
+if (caracter >= 'a' && caracter <= 'z') {
+caracter = (char)(caracter - 32);
+}
+resultado += caracter;
+}
+
+// TODO: Implementar el método para convertir una cadena a mayúsculas.
         // Ejemplo: Si cadena = "hello", el resultado debería ser "HELLO".
-        return "";
+        return "resultado";
     }
 
     // Método que convierte una cadena a minúsculas
