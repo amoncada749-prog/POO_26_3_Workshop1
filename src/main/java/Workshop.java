@@ -3,7 +3,7 @@ import java.util.List;
 public class Workshop {
 public static void main(String[] args) {
 Workshop workshop = new Workshop();
-System.out.println(workshop.contarCaracteres("Hola"));
+System.out.println(workshop.invertirCadena("Hola"));
 }
  // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
@@ -257,9 +257,13 @@ contador++;
 
     // Método que invierte una cadena
     public String invertirCadena(String cadena) {
+String resultado = "";
+for (int i = cadena.length() -1; i >= 0; i--) {
+resultado += cadena.charAt(i);
+}
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
-        return "";
+        return resultado;
     }
 
     // Método que verifica si una cadena es un palíndromo
