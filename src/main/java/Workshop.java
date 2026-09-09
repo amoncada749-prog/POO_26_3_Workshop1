@@ -341,10 +341,19 @@ int posicionPunto = correo.indexOf(".");
     // Método que calcula el promedio de una lista de números
 
     public double promedioLista(List<Integer> lista) {
+int suma = 0;
+for (int numero : lista) {
+suma += numero;
+}
+
+
         // TODO: Implementar el método para calcular el promedio de una lista de números.
         // Ejemplo: Si lista = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
-        return 0.0;
+        return (double) suma / lista.size();
+
     }
+
+// creo que la lista esta vacia que debemos retornar 
 
     // Método que convierte un número en su representación binaria
     public String convertirABinario(int numero) {
