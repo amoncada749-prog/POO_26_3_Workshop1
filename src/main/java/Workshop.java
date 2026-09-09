@@ -2,8 +2,13 @@ import java.util.List;
 
 public class Workshop {
 public static void main(String[] args) {
-    Workshop workshop = new Workshop();    System.out.println(workshop.validarCorreoElectronico("usuario@gmail.com"));
-System.out.println(workshop.validarCorreoElectronico("usuario@gmail"));
+Workshop workshop = new Workshop();
+System.out.println("32. Signo zodiacal: " + workshop.zoodiac(15, 8));
+System.out.println(workshop.zoodiac(15, 8)); // Leo
+System.out.println(workshop.zoodiac(25, 8)); // Virgo
+System.out.println(workshop.zoodiac(10, 1)); // Capricornio
+System.out.println(workshop.zoodiac(30, 3)); // Aries
+System.out.println(workshop.zoodiac(10, 11)); // Escorpio
 }
 // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
@@ -411,10 +416,47 @@ Rock crushes Scissors
         return 0.0;
     }
 
-    public String zoodiac(int day, int month) {
-        return "";
+    public String zoodiac(int day, int month) {    
+switch (month) {
+case 1:
+if (day <= 19) return "Capricornio";
+            else return "Acuario";
+case 2:
+if (day <= 18) return "Acuario";
+else return "Piscis";
+case 3:
+if (day <= 20) return "Piscis";
+else return "Aries";
+case 4:
+if (day <= 19) return "Aries";
+else return "Tauro";
+case 5:
+if (day <= 20) return "Tauro";
+else return "Géminis";
+case 6:
+if (day <= 20) return "Géminis";
+else return "Cáncer";
+case 7:
+if (day <= 22) return "Cáncer";
+else return "Leo";
+case 8:
+if (day <= 22) return "Leo";
+else return "Virgo";
+case 9:
+if (day <= 22) return "Virgo";
+else return "Libra";
+case 10:
+if (day <= 22) return "Libra";
+else return "Escorpio";
+case 11:
+if (day <= 21) return "Escorpio";
+else return "Sagitario";
+case 12:
+if (day <= 21) return "Sagitario";
+else return "Capricornio";
+default:
+            return "Mes inválido";
     }
-
-
 }
 
+      
